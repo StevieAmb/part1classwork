@@ -17,7 +17,7 @@ const Button = ({handleClick, text}) => {
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
-  const handleClick = () => {
+  const increase = () => {
     setCounter(counter + 1)
   }
 
@@ -25,17 +25,25 @@ const App = () => {
     setCounter(0)
   }
 
+  const decreaseByOne = () => {
+    setCounter(counter - 1)
+  }
+
   return (
     <section>
       <Display counter={counter} />
       <Button 
         text="Plus"
-        handleClick={handleClick}
+        handleClick={increase}
       />
       <Button 
         text="Zero"
         handleClick={resetToZero}
       />
+       <Button
+        text='Minus'
+        handleClick={decreaseByOne}
+      />  
     </section>
   )
 }
