@@ -6,6 +6,14 @@ const Display = ({counter}) => {
   )
 }
 
+const Button = ({handleClick, text}) => {
+  return (
+    <button onClick={handleClick}>
+      {text}
+    </button>
+  )
+}
+
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
@@ -20,9 +28,10 @@ const App = () => {
   return (
     <section>
       <Display counter={counter} />
-      <button onClick={handleClick}>
-        plus
-      </button>
+      <Button 
+        text="Plus"
+        handleClick={handleClick}
+      />
       <button onClick={resetToZero}> 
         zero
       </button>
