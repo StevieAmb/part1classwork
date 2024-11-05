@@ -32,9 +32,10 @@ const App = () => {
         text="Plus"
         handleClick={handleClick}
       />
-      <button onClick={resetToZero}> 
-        zero
-      </button>
+      <Button 
+        text="Zero"
+        handleClick={resetToZero}
+      />
     </section>
   )
 }
