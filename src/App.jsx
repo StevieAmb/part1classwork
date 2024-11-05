@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-const Display = (props) => {
+const Display = ({counter}) => {
   return (
-    <p>{props.counter}</p>
+    <p>{counter}</p>
   )
 }
 
@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <section>
-      <p>{counter}</p>
+      <Display counter={counter} />
       <button onClick={handleClick}>
         plus
       </button>
