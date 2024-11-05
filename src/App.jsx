@@ -8,11 +8,16 @@ const App = () => {
     1000
   )
 
-  console.log('rendering...', counter)
+  // console.log('rendering...', counter)
 
 
   return (
-    <div>{counter}</div>
+    <section>
+      <p>{counter}</p>
+      <button onClick={handleClick}>
+        plus
+      </button>
+    </section>
   )
 }
 
