@@ -1,5 +1,11 @@
 import { useState } from 'react'
 
+const Display = (props) => {
+  return (
+    <p>{props.counter}</p>
+  )
+}
+
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
