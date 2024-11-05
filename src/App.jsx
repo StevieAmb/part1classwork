@@ -4,18 +4,20 @@ const App = () => {
   const [ counter, setCounter ] = useState(0)
 
   const handleClick = () => {
-    console.log('clicked')
+    setCounter(counter + 1)
   }
-  // console.log('rendering...', counter)
 
+  const resetToZero = () => {
+    setCounter(0)
+  }
 
   return (
     <section>
       <p>{counter}</p>
-      <button onClick={() => handleClick()}>
+      <button onClick={handleClick}>
         plus
       </button>
-      <button onClick={() => setCounter(0)}> 
+      <button onClick={resetToZero}> 
         zero
       </button>
     </section>
