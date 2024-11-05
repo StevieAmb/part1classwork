@@ -1,25 +1,15 @@
-
-const Hello = ({ name, age }) => {
-
-
-  const bornYear = () => new Date().getFullYear() - age
-
-  return (
-    <div>
-      <p>Hello {name}, you are {age} years old</p>
-      <p>So you were probably born {bornYear()}</p>
-    </div>
-  )
-}
+import { useState } from 'react'
 
 const App = () => {
-  const friends = [ 'Leevi', 'Venla']
+  const [ counter, setCounter ] = useState(0)
+
+  setTimeout(
+    () => setCounter(counter + 1),
+    1000
+  )
 
   return (
-    <div>
-      <Hello name="Sarah" age="33" />
-      <p>{friends}</p>
-    </div>
+    <div>{counter}</div>
   )
 }
 
