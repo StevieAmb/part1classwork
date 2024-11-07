@@ -1,49 +1,35 @@
 import { useState } from 'react'
 
-const Display = ({counter}) => {
-  return (
-    <p>{counter}</p>
-  )
-}
+// const Display = ({counter}) => {
+//   return (
+//     <p>{counter}</p>
+//   )
+// }
 
-const Button = ({handleClick, text}) => {
-  return (
-    <button onClick={handleClick}>
-      {text}
-    </button>
-  )
-}
+// const Button = ({handleClick, text}) => {
+//   return (
+//     <button onClick={handleClick}>
+//       {text}
+//     </button>
+//   )
+// }
 
 const App = () => {
-  const [ counter, setCounter ] = useState(0)
-
-  const increase = () => {
-    setCounter(counter + 1)
-  }
-
-  const resetToZero = () => {
-    setCounter(0)
-  }
-
-  const decreaseByOne = () => {
-    setCounter(counter - 1)
-  }
+  const [left, setLeft] = useState(0)
+  const [right, setRight] = useState(0)
 
   return (
     <section>
-      <Display counter={counter} />
-      <Button 
-        text="Plus"
-        handleClick={increase}
-      />
-      <Button 
-        text="Zero"
-        handleClick={resetToZero}
-      />
-       <Button
-        text='Minus'
-        handleClick={decreaseByOne}
-      />  
+      <div>
+        {left}
+        <button onClick={() => setLeft(left + 1)}>
+          left
+        </button>
+        <button onClick={() => setRight(right + 1)}>
+          right
+        </button>
+        {right}
+      </div>
     </section>
   )
 }
