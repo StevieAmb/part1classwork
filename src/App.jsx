@@ -1,19 +1,5 @@
 import { useState } from 'react'
 
-// const Display = ({counter}) => {
-//   return (
-//     <p>{counter}</p>
-//   )
-// }
-
-// const Button = ({handleClick, text}) => {
-//   return (
-//     <button onClick={handleClick}>
-//       {text}
-//     </button>
-//   )
-// }
-
 const App = () => {
   const [left, setLeft] = useState(0)
   const [right, setRight] = useState(0)
@@ -35,6 +21,7 @@ const App = () => {
         <button onClick={handleLeftClick}>left</button>
         <button onClick={handleRightClick}>right</button>
         {clicks.right}
+        <p>{allClicks.join(' ')}</p>
       </div>
     </div>
   )
