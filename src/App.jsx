@@ -19,11 +19,14 @@ const App = () => {
   const [right, setRight] = useState(0)
   const [allClicks, setAll] = useState([])
 
-  const handleLeftClick = () =>
-    setClicks({ ...clicks, left: clicks.left + 1 })
-  
-  const handleRightClick = () =>
-    setClicks({ ...clicks, right: clicks.right + 1 })
+  const handleLeftClick = () => {
+    setAll(allClicks.concat('L'))
+    setLeft(left + 1)
+  }
+
+  const handleRightClick = () => {
+    setAll(allClicks.concat('R'))
+    setRight(right + 1)
 
   return (
     <div>
@@ -35,6 +38,7 @@ const App = () => {
       </div>
     </div>
   )
+}
 }
 
 export default App
